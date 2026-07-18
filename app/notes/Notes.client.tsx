@@ -56,7 +56,7 @@ function NotesClient() {
       <div className={css.app}>
       <header className={css.toolbar}
       > 
-        <SearchBox defaultValue={search.search} onChange={handleSearchInput}  />
+        <SearchBox defaultValue={search.search ?? ''} onChange={handleSearchInput}  />
         {isSuccess && totalPages > 0 && <Pagination page={search.page} setPage={handlePageChange} totalPages={totalPages} />}
         <button className={css.button} onClick={handleClick}>Create note +</button>
       </header>

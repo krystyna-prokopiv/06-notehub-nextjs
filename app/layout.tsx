@@ -28,10 +28,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
       <body>
+        <TanStackProvider>
         <Header />
-        <TanStackProvider><main>{children}</main></TanStackProvider>
-        
-        <Footer />
+        <main>{children}</main>
+          <Footer />
+        </TanStackProvider>
       </body>
     </html>
   );

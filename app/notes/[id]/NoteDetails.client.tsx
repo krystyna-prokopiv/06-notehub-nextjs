@@ -35,8 +35,8 @@ export default function NoteDetailsClient() {
                         <p className={css.date}>{noteQ.data?.createdAt}</p>
                     </div>
                 </div>}
-            {noteQ.isError && <p>Loading, please wait...</p>}
-            {noteQ.isLoading && <p>Something went wrong.</p>}
+            {noteQ.isError && <p>Something went wrong.</p>}
+            {noteQ.isLoading && <p>Loading, please wait...</p>}
         </>
     )
 

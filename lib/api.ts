@@ -3,11 +3,11 @@ import type { Note } from "../types/note";
 export type CreateNoteParams = Omit<Note, "id" | "createdAt" | "updatedAt">;
 
 export interface NotesQueryParams {
-  search: string;
+  search?: string;
   page: number;
-  tag: "Todo" | "Work" | "Personal" | "Meeting" | "Shopping";
-  perPage: number;
-  sortBy: "created" | "updated";
+  tag?: "Todo" | "Work" | "Personal" | "Meeting" | "Shopping";
+  perPage?: number;
+  sortBy?: "created" | "updated";
 }
 const myKey = process.env.NEXT_PUBLIC_NOTEHUB_TOKEN;
 
