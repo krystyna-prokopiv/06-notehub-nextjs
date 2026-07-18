@@ -25,6 +25,18 @@ export async function fetchNotes(data: NotesQueryParams) {
   return res.data;
 }
 
+export async function fetchNotesById(id: Note["id"]): Promise<Note> {
+  const { data } = await axios.get<Note>(
+    `https://notehub-public.goit.study/api/notes/${id}`,
+    {
+      headers: {
+        Authorization: `Bearer ${myKey}`,
+      },
+    },
+  );
+  return data;
+}
+
 export async function createNote(values: CreateNoteParams) {
   const { data } = await axios.post<Note>(
     "https://notehub-public.goit.study/api/notes",
